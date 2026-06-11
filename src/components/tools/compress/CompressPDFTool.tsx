@@ -664,7 +664,15 @@ export function CompressPDFTool({ className = '' }: CompressPDFToolProps) {
             </p>
           </div>
 
-          <div className="flex gap-2 justify-center max-w-xs mx-auto">
+          <div className="flex gap-2 justify-center max-w-sm mx-auto">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="font-bold"
+              onClick={handleClearSingleFile}
+            >
+              {t('buttons.clear') || 'Clear'}
+            </Button>
             <DownloadButton
               file={files[0].result!}
               filename={`${singleFile.name.replace('.pdf', '')}_compressed.pdf`}
